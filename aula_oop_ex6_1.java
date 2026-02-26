@@ -10,7 +10,7 @@ public class LojaMegaVale {
             this.marca = marca;
             this.tipo = tipo;
             this.tipoEmbalagem = tipoEmbalagem;
-            this.volume = volume; // Correção: nome da variável
+            this.volume = volume;
         }
         
         public void abrir() {
