@@ -1,8 +1,9 @@
+
 package com.example.feira.model;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Stream;
 
 public class Barraca {
     private String nomeFeirante;
@@ -11,6 +12,8 @@ public class Barraca {
 
     public Barraca(String nomeFeirante, String localizacao) {
         this.nomeFeirante = nomeFeirante;
+        this.balanco = 0.0;
+        this.listaDeFrutas = new HashMap<>();
     }
 
     public String getNomeFeirante() {
@@ -29,10 +32,10 @@ public class Barraca {
 
     public void adicionarFruta(Fruta fruta){
         this.listaDeFrutas.put(fruta.getEspecie(), fruta);
-    };
+    }
 
     public List<Fruta> mostrarFrutas() {
-        return Stream.of((Fruta) listaDeFrutas.values()).toList();
+        return this.listaDeFrutas.values().stream().toList();
     }
 
     public double realizarVenda(Fruta fruta, double peso) {

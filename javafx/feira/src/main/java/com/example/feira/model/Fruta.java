@@ -8,6 +8,7 @@ public class Fruta {
     public Fruta(double precoPorQuilo, String especie) {
         this.precoPorQuilo = precoPorQuilo;
         this.especie = especie;
+        this.madura = false;
     }
 
     public String getEspecie() {
