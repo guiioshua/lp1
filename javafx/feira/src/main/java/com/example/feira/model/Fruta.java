@@ -5,10 +5,29 @@ public class Fruta {
     private double precoPorQuilo;
     private boolean madura;
 
-    public void crescer() {
+    public Fruta(double precoPorQuilo, String especie) {
+        this.precoPorQuilo = precoPorQuilo;
+        this.especie = especie;
     }
-    public void estragar() {
+
+    public String getEspecie() {
+        return especie;
     }
-    public void germinar() {
+    public void setEspecie(String especie) {
+        this.especie = especie;
+    }
+
+    public double getPrecoPorQuilo() {
+        return precoPorQuilo;
+    }
+    public void setPrecoPorQuilo(double precoPorQuilo) {
+        this.precoPorQuilo = precoPorQuilo;
+    }
+
+    public boolean isMadura() {
+        return madura;
+    }
+    public void amadurecer() {
+        this.madura = true;
     }
 }
